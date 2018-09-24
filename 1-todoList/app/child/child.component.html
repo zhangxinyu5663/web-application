@@ -1,0 +1,16 @@
+<h3>正在进行：</h3>
+<ul>
+  <li *ngFor="let item of arr1;let i=index;">
+    <input type="checkbox" (click)="fun1(i)">
+    {{item}}
+    <button (click)="fun2(i)">删除</button>
+  </li>
+</ul>
+<h3>已完成：</h3>
+<ul>
+  <li *ngFor="let item2 of arr2;let j=index;">
+    <input type="checkbox" checked="checked" (click)="fun3(j)">
+    {{item2}}
+    <button (click)="fun4(j)">删除</button>
+  </li>
+</ul>
