@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <!-- <script src="animate.js"></script> -->
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #box{
+            width: 1200px;
+            height: 397px;
+            margin-left: 50px;
+            margin-top: 50px;
+             overflow: hidden;
+        }
+        #btn{
+            width: 1200px;
+            height:50px;
+            border:1px solid red;
+            position: absolute;
+            margin-top:180px;
+        }
+        #btn span{
+            color:white;
+            font-size: 30px;
+            text-align: center;
+        }
+        #prev{
+            background:#2F4F4F;
+            cursor: pointer;
+        }
+        #next{
+            background:#2F4F4F;
+            margin-left: 1140px;
+            cursor: pointer;
+        }
+        #disc{
+            width:1200px;
+            height: 50px;
+            margin-top: 347px;
+            border: 1px solid red;
+            position: absolute;
+        }
+        .circle{
+            width:22px;
+            height: 22px;
+            border-radius: 50%;
+            background: white;
+        }
+        .circle:hover{
+            background: red;
+            cursor: pointer;
+        }
+
+        #ul{
+            width:7500px;
+            list-style: none;
+            position: relative;
+        }
+        #ul li{
+            width:1200px;
+            float: left;
+            position: relative;
+        }
+        #img1{
+            width: 1200px;
+            right: 0;
+        }
+        #img2{
+            width: 1200px;
+            right: 0;
+        }
+        #img3{
+            width: 1200px;
+            right: 0;
+        }
+        #img4{
+            width: 1200px;
+            right: 0;
+        }
+        #img5{
+            width: 1200px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="ul">
+            <li><img src="images/banner_01.jpg" id="img1"></li>
+            <li><img src="images/banner_02.jpg" id="img2"></li>
+            <li><img src="images/banner_03.jpg" id="img3"></li>
+            <li><img src="images/banner_04.jpg" id="img4"></li>
+            <li><img src="images/banner_05.jpg" id="img5"></li>         
+        </ul>
+    </div>
+    <!-- <div id="btn">
+        <span id="prev"><</span>
+        <span id="next">></span>
+    </div>
+    <div id="disc">
+        <div class="circle" style="margin-left:520px;margin-top:10px;float: left;"></div>
+        <div class="circle" style="margin-left:15px;margin-top:10px;float: left;"></div>
+        <div class="circle" style="margin-left:15px;margin-top:10px;float: left;"></div>
+        <div class="circle" style="margin-left:15px;margin-top:10px;float: left;"></div>
+        <div class="circle" style="margin-left:15px;margin-top:10px;float: left;"></div>
+    </div> -->
+</body>
+<script>
+    function getStyle(obj,attr){ //获取元素属性值的兼容写法
+        if(obj.currentStyle){
+            return obj.currentStyle[attr];
+        }else{
+            return getComputedStyle(obj,null)[attr];
+        }
+    }
+    function animate(obj,json,callback){
+    setInterval(function(){
+        var isStop=true; //标志位
+        for(var attr in json){
+            var now=0;
+            if(attr=='opacity'){
+                now=parseInt(getStyle(obj,attr)*100);//opacity范围是0-1
+            }else{
+                now=parseInt(getStyle(obj,attr));
+            }
+            var speed=(json[attr]-now)/6;
+            speed=speed>0?Math.ceil(speed):Math.floor(speed);
+            var current=now+speed;
+            if(attr=='opacity'){
+                obj.style.opacity=current/100;
+            }else{
+                obj.style[attr]=current+'px';
+            }
+            if(json[attr] !== current){
+                isStop=false;
+            }  //判断三个属性是否都到了目标值,若有一个没到，就不能清除定时器
+        }
+        if(isStop){
+            clearInterval(obj.timer);
+            // if(callback){
+            //     callback();
+            // }
+            callback&&callback();
+        }
+    },100)
+}
+
+    var ul=document.getElementById('ul');
+    var imgs=ul.children;
+        animate(imgs[0],{right:1250});
+        animate(imgs[1],{right:2450});
+        animate(imgs[2],{right:3650});
+        animate(imgs[3],{right:4850});  
+        animate(imgs[4],{right:5050});    
+</script>
+</html>
