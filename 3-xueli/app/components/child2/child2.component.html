@@ -1,0 +1,25 @@
+<div id="div1">
+    <ul>
+        <li><a href="">我加入的</a></li>
+      </ul>
+</div>
+<div id="div2">
+    <ul>
+      <li *ngFor="let course of courses;">
+          <a [routerLink]="['/tongbu',course.id]">
+            <img src="{{course.images}}" alt="" id="img">
+            <div id="div3">
+              <br>
+              <span>{{course.courseName}}</span>
+              <br>
+              <div id="div4"><font size="2" color="gray">{{course.detail}}</font></div>
+              <span><img src="assets/images/task.png" width="30px" height="30px"> {{course.task}}</span>
+              <span><img src="assets/images/ren.png" width="30px" height="30px"> {{course.person}} </span>
+            </div>
+            <div id="circle">
+              <p style="text-align:center;line-height:80px;">{{course.score}}分</p>
+            </div>
+          </a>
+      </li>      
+    </ul>
+  </div>

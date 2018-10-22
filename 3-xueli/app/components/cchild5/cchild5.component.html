@@ -1,0 +1,22 @@
+<div id="div1">
+  <ul>
+    <li *ngFor="let t of tongzhi;">
+        <a>
+          <img src="{{t.touxiang}}" alt="" id="tx">
+          <div id="div2">
+            <span>{{t.name}}</span>
+            <div id="div3">
+              <span><a style="color:orange;cursor:pointer;">{{t.fangfa}}</a></span>
+              ,{{t.detail}}
+              <br>
+              {{t.detail2}}
+              <br><br>
+              <span style="color:gray">{{t.time}}</span>
+              <span style="float:right;color:gray;">收藏&nbsp;|&nbsp;转发&nbsp;|&nbsp;评论&nbsp;|&nbsp;赞&nbsp;{{t.zan}}</span>
+              <hr style="height:1px;border:none;border-top:1px solid gray;margin-top: 10px;">
+            </div>
+          </div>
+        </a>
+    </li>      
+  </ul>
+</div>

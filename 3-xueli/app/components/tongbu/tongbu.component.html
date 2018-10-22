@@ -1,0 +1,25 @@
+<!-- 
+<p>
+  tongbu works!
+</p>
+<h2>{{cId}}</h2>
+<button (click)="go()">跳转</button> 
+-->
+
+<div class="container">
+  <ul>
+    <li *ngFor="let course of courses;">
+        <a [routerLink]="['/tongbu',course.id]">
+          <img src="{{course.images}}" alt="">
+          <br>
+          <span>{{course.courseName}}</span>
+          <br><br>
+          <div>
+            <span><img src="assets/images/task.png" alt=""> {{course.task}}</span>
+            <span style="margin-left:30px;"><img src="assets/images/ren.png" alt=""> {{course.person}} </span>
+            <button id="join">+申请</button>
+          </div>
+        </a>
+    </li>      
+  </ul>
+</div>

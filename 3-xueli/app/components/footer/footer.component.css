@@ -1,0 +1,12 @@
+footer{
+    /* border: 1px solid black; */
+    width: 1000px;
+    height: 20px;
+    top: 800px;
+    position: absolute;
+    margin-left: 270px;
+}
+p{
+    color: gray;
+    text-align: center;
+}

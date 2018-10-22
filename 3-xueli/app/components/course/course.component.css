@@ -1,0 +1,39 @@
+#container{
+    width:1000px;
+    margin:30px auto;
+}
+#container li{
+    float: left;
+    width:230px;
+    height: 250px;
+    margin:15px 5px;
+    border:1px solid #D3D3D3;
+    border-radius: 5px;
+}
+#container ul li a:hover{
+    text-decoration: none;
+}
+#container ul li a img{
+    width: 230px;
+    height: 130px;
+}
+#container ul li a{
+    color: black;
+}
+#div1{
+    width: 230px;
+    height: 20px;
+    overflow: hidden;
+    margin: 0px auto;
+}
+#div2{
+    width: 230px;
+    height: 60px;
+    overflow: hidden;
+    margin: 5px auto;
+}
+#div3{
+    width: 200px;
+    margin: 0px auto;
+    margin: 5px auto;
+}

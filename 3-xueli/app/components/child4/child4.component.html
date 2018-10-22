@@ -1,0 +1,18 @@
+<div id="div1">
+  学霸，学渣，偶想说~
+  <br>
+  <textarea  id="" cols="120" rows="10"></textarea>
+  <br>
+  <ul>
+    <li><a href=""><img src="assets/images/chat.png" alt=""> 话题&nbsp;&nbsp;|</a></li>
+    <li><a href="">&nbsp;&nbsp;<img src="assets/images/changwen.png" alt=""> 发长文</a></li>
+  </ul>
+  <button id="bt">发布</button>
+</div>
+<br>
+<ul id="ul">
+  <li (click)="func(1)" id="ll1"><a [routerLink]="['./cchild4']"><img src="assets/images/chat.png" alt="">动态</a></li>
+  <li (click)="func(2)" id="ll2"><a [routerLink]="['./cchild4']"><img src="assets/images/zan.png" alt="">我的赞</a> </li>
+  <li (click)="func(3)" id="ll3"><a [routerLink]="['./cchild4']"><img src="assets/images/xing.png" alt="">我的收藏</a> </li>
+</ul>
+<router-outlet></router-outlet>

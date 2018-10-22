@@ -1,0 +1,31 @@
+#ul{
+    width: 650px;
+    height:60px;
+    border-bottom:2px solid #D3D3D3;
+    margin:10px auto;
+}
+#ul li{
+    width: 100px;
+    height: 50px;
+    /* border:1px solid gray; */
+    margin-left: 5px;
+    float: left;
+
+    /* border-bottom:2px solid #ff6e3d; */
+}
+#ul li a{
+    text-align: center;
+    line-height: 50px;
+    color: black;
+}
+#ul li a:hover{
+    color: brown;
+}
+#ul li a img{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+}
+#li1{
+    border-bottom: 2px solid #ff6e3d;
+}

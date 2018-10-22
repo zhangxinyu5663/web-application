@@ -1,0 +1,59 @@
+<!-- <p>
+  shequ works!
+</p>
+<h3>{{name}}</h3>
+<h4>{{id}}</h4> -->
+<div id="container">
+  <!-- <ul>
+    <li *ngFor="let c of courses;">
+        <a [routerLink]="['/course',c.id]">
+          <img src="{{c.images}}" alt="">
+          <br>
+          <div id="div1">{{c.courseName}}</div>
+          <div id="div2"><font size="2" color="gray">{{c.detail}}</font></div>
+          <div id="div3">
+            <span style="color:gray;">课时 {{c.time}}</span>
+            <span style="margin-left:60px; color: gray;">人数{{c.person}} </span>
+          </div>
+        </a>
+    </li>      
+  </ul> -->
+  <div id="left"> 
+    <ul>
+      <li *ngFor="let info of infos">
+        <a>
+          <img src="{{info.touxiang}}" alt="" id="img1">
+          <img src="{{info.images}}" alt="" id="img2">
+          <div id="div1">
+              <span style="margin-top:10px;"><a href="">{{info.name}}</a></span>
+              <br><br>
+              <span style="color:gray;font-size:15px">{{info.detail}}</span>
+          </div>
+          <div id="div2">
+              <span style="color:gray;">{{info.author}}&nbsp;&nbsp;{{info.time}}</span>
+              <span style="color:gray;float:right;">阅读{{info.read}} &nbsp;|&nbsp;评论{{info.comment}}</span>
+              <hr style="height:1px;border:none;border-top:1px solid gray;margin-top: 10px;">
+          </div>
+          
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="right">
+    <span style="font-size: 20px;">热门话题</span>
+    <hr style="height:1px;border:none;border-top:1px solid gray;margin-top: 5px;">
+    <ul>
+      <li><a href="#">#2015级程序设计基础# <span style="float:right;">6万</span></a></li>
+      <li><a href="#">#2015级面向对象程序设计#<span style="float:right;">3万</span></a></li>
+      <li><a href="#">#cms与模板制作#<span style="float:right;">3万</span></a></li>
+      <li><a href="#">#数据结构#<span style="float:right;">3万</span></a></li>
+      <li><a href="#">#数据库原理#<span style="float:right;">2万</span></a></li>
+      <li><a href="#">#2014级PHP程序...#<span style="float:right;">2万</span></a></li>
+      <li><a href="#">#Web开发(二)...#<span style="float:right;">1万</span></a></li>
+      <li><a href="#">#数据库系统概论#<span style="float:right;">1万</span></a></li>
+      <li><a href="#">#Web开发(二)20...#<span style="float:right;">1万</span></a></li>
+      <li><a href="#">#Web开发(一)20...#<span style="float:right;">1万</span></a></li>
+    </ul>
+  </div>
+</div>
+

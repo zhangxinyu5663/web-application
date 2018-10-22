@@ -1,0 +1,23 @@
+<div id="div">
+  <div class="left">
+    <div id="head">
+      <img src="http://usercontent.edu2act.cn/media/userheader/18-03-05/PpQjuDDZDsXp9gKGSKL2Ho.jpg" alt="">
+      <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7-张馨予</h4>
+      <ul id="ul1">
+        <li><a href="">&nbsp; <font style="font-size:25px;">0</font> <br> 粉丝</a></li>
+        <li><a href="">&nbsp; <font style="font-size:25px;">0</font> <br> 关注</a></li>
+      </ul>
+    </div>
+    <hr style="height:1px;border:none;border-top:1px solid gray;margin-top: 5px;">
+    <ul id="ul2">
+      <li><a [routerLink]="['./child1']" (click)="fun(1)" id="l1"><img src="assets/images/task.png" alt="">&nbsp;任务 <span style="margin-left:90px;">></span></a></li>  <!--子路由里的路径一定要加.-->
+      <li><a [routerLink]="['./child2']" (click)="fun(2)" id="l2"><img src="assets/images/course.png" alt="">&nbsp;同步课<span style="margin-left:80px;">></span> </a></li>
+      <li><a [routerLink]="['./child3']" (click)="fun(3)" id="l3"><img src="assets/images/book.png" alt="">&nbsp;课程 <span style="margin-left:90px;">></span> </a></li>
+      <li><a [routerLink]="['./child4']" (click)="fun(4)" id="l4"><img src="assets/images/chat.png" alt="">&nbsp;且说 <span style="margin-left:90px;">></span> </a></li>
+      <li><a [routerLink]="['./child5']" (click)="fun(5)" id="l5"><img src="assets/images/laba.png" alt="">&nbsp;通知 <span style="margin-left:90px;">></span></a></li>
+    </ul>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>  <!--最终在哪里变，就把路由出口放在哪里--> 
+  </div>
+</div>

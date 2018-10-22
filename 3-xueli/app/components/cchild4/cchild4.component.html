@@ -1,0 +1,23 @@
+<div id="div1">
+    <ul>
+      <li *ngFor="let q of qieshuo;">
+          <a>
+            <img src="{{q.touxiang}}" alt="" id="tx">
+            <div id="div2">
+              <span>{{q.name}}</span>
+              <div id="div3">
+                给<a style="color:#ff6e3d;cursor:pointer">{{q.studier}}</a>指派了任务
+                <br>
+                <a style="color:#ff6e3d;cursor:pointer">{{q.task}}</a>
+                <br>
+                {{q.detail}}
+                <br><br>
+                <span style="color:gray">{{q.time}}</span>
+                <span style="float:right;color:gray;">收藏&nbsp;|&nbsp;转发&nbsp;|&nbsp;评论&nbsp;{{q.pinglun}}&nbsp;|&nbsp;赞&nbsp;</span>
+                <hr style="height:1px;border:none;border-top:1px solid gray;margin-top: 10px;">
+              </div>
+            </div>
+          </a>
+      </li>      
+    </ul>
+  </div>

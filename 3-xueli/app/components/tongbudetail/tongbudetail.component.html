@@ -1,0 +1,39 @@
+<nav>
+  <div id="div1">
+      <img src="assets/images/course.png" alt="" style="float:left;" width="30px" height="30px;">
+      <div id="div2">
+          <ul>
+              <li><a href="">同步课/</a></li>
+              <li><a href="">{{cor?.courseName}}</a></li>
+              <li style="margin-left:10px;margin-top:6px;"><button id="bt">✔已加入</button></li>
+          </ul>
+      </div>
+      <div id="div3">
+          <ul>
+              <li  (click)="fun(1)" id="a1"><a><img src="assets/images/jianjie.png" alt=""> 简介</a></li>
+              <li  (click)="fun(2)" id="a2"><a><img src="assets/images/biaoqing.png" alt=""> 互动</a></li>
+              <li (click)="fun(3)" id="a3"><a><img src="assets/images/task.png" alt=""> 任务&nbsp;<span style="border-radius:50%;width: 30px;height:30px;border:1px solid gray;background-color: #d3d3d3;font-family: '等线';">{{cor?.task}}</span></a></li>
+              <li (click)="fun(4)" id="a4"><a><img src="assets/images/ren.png" alt=""><span style="border-radius:25px;width: 30px;height:30px;border:1px solid gray;background-color: #d3d3d3;font-family: '等线';">成员{{cor?.person}}</span></a></li>
+          </ul> 
+      </div>
+  </div>
+</nav>
+  <!-- <ul class="list">
+    <li [class.active]='flag'>简介</li>
+    <li [class.active]='true'>互动</li>
+    <li [ngClass]="{'active':true}">任务{{cor?.task}}</li>
+    <li [style.color]="'pink'">成员{{cor?.person}}</li>
+    <li [ngStyle]="{'color':'red','font-size':'25px'}">啦啦啦</li>
+  </ul>
+</div>
+<input type="radio" value="1" name='num' (change)="change($event)" checked>1
+<input type="radio" value="2" name='num' (change)="change($event)">2
+<input type="radio" value="3" name='num' (change)="change($event)">3
+<div [ngSwitch]="num">
+  <div *ngSwitchCase="1">郭</div>
+  <div *ngSwitchCase="2">志</div>
+  <div *ngSwitchCase="3">朋</div>
+</div>
+<p>{{jsonObject|json}}</p>
+<p>{{date|date:'y-MM-dd E'}}</p>
+<p>{{'wuchenyu'|uppercase}}</p> -->

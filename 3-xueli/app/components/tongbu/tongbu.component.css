@@ -1,0 +1,31 @@
+.container{
+    width:1000px;
+    margin:30px auto;
+}
+.container li{
+    float: left;
+    width:230px;
+    margin:15px 5px;
+    border:1px solid #D3D3D3;
+    border-radius: 5px;
+}
+.container ul li a:hover{
+    text-decoration: none;
+}
+.container ul li a{
+    color: black;
+}
+#join{
+    margin-left: 10px;
+    width: 60px;
+    height: 30px;
+    background-color: #FF8C00;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.container ul li a div img{
+    width: 30px;
+    height: 30px;
+}
