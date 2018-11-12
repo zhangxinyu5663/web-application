@@ -1,0 +1,239 @@
+<ion-header>
+  <ion-navbar color="yel" no-border>
+    <!-- <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-title>
+      <img src="../assets/images/title.png" alt="">
+    </ion-title>
+    <!-- <ion-buttons end>
+      <ion-icon name="options"></ion-icon>
+    </ion-buttons> -->
+    <ion-buttons  color="dark" icon-only end>
+      <ion-icon name="ios-search"></ion-icon>
+    </ion-buttons>
+  </ion-navbar>
+  
+  <!--节点按钮组件： 分段控件  与[ngSwitch]连用-->
+  <!-- <ion-toolbar>
+      <ion-segment [(ngModel)]="icons" color="secondary">
+        <ion-segment-button value="camera">
+          <ion-icon name="camera"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="bookmark">
+          <ion-icon name="bookmark"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+      <div [ngSwitch]="icons">
+      -->
+        <!-- 双引号里面如果不加单引号，是变量；加了单引号，是字符串 -->
+        <!-- <div *ngSwitchCase="'camera'">
+          这是camera
+        </div>
+        <div *ngSwitchCase="'bookmark'">
+            这是bookmark
+          </div>
+      </div>
+  </ion-toolbar>  -->
+</ion-header>
+
+<ion-content padding>
+  <ul class="ul">
+    <li class="first" (click)="fun(1)" id="li1">推荐</li>
+    <li (click)="fun(2)" id="li2">家居</li>
+    <li (click)="fun(3)" id="li3">餐厨</li>
+    <li (click)="fun(4)" id="li4">床上用品</li>
+  </ul>
+  <div style="clear:both;" [ngSwitch]="num">
+      <div *ngSwitchCase="1">
+          <ion-slides class="sli" loop="true" autoplay="2000" pager="true" effect="slide" speed="1000" >  
+                <ion-slide>
+                  <img src="../assets/images/banner.png" alt="">
+                </ion-slide>
+                <ion-slide>
+                  <img src="../assets/images/banner.png" alt="">
+                </ion-slide>
+                <ion-slide>
+                  <img src="../assets/images/banner.png" alt="">
+                </ion-slide>
+          </ion-slides>
+          <img src="../assets/images/推荐.png" alt="">
+          <ul class="goods">
+            <li>
+              <img src="../assets/images/首页0-1.png" alt="">
+              <p>——-北欧原木色-——</p>
+              <span style="color:red;"><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+            <li>
+              <img src="../assets/images/首页0-2.png" alt="">
+              <p>——-简约黑檀木茶几-——</p>
+              <span style="color:grey;"><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+            <li>
+              <img src="../assets/images/首页0-3.png" alt="">
+              <p>——-北欧白橡木书架-——</p>
+              <span style="color:grey;"><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+            <li>
+              <img src="../assets/images/首页0-4.png" alt="">
+              <p>——-北欧风餐边柜-——</p>
+              <span style="color:red;"><ion-icon name="md-star-half"></ion-icon></span>
+            </li> 
+            <li>
+              <img src="../assets/images/首页0-1.png" alt="">
+              <p>——-北欧原木色-——</p>    
+              <span style="color:grey;"><ion-icon name="md-star-half"></ion-icon></span>
+            </li>  
+            <li>
+              <img src="../assets/images/首页0-2.png" alt="">
+              <p>——-简约黑檀木茶几-——</p>     
+              <span style="color:grey;"><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+          </ul>
+      </div>
+      <div *ngSwitchCase="2">
+        <ion-slides class="sli" loop="true" autoplay="2000" pager="true" effect="slide" speed="1000" >  
+          <ion-slide>
+            <img src="../assets/images/banner2.png" alt="">
+          </ion-slide>
+          <ion-slide>
+            <img src="../assets/images/banner2.png" alt="">
+          </ion-slide>
+          <ion-slide>
+            <img src="../assets/images/banner2.png" alt="">
+          </ion-slide>
+        </ion-slides>
+        <ul class="three">
+          <li>
+            <img src="../assets/images/家居页0-1.png" alt="">
+            <p>客厅</p>
+          </li>
+          <li>
+              <img src="../assets/images/家居页0-2.png" alt="">
+              <p>书房</p>
+          </li>
+          <li>
+              <img src="../assets/images/家居页0-3.png" alt="">
+              <p>门厅</p>
+          </li>
+        </ul>
+        <img src="../assets/images/桔子家居.png">
+        <ul class="goods2">
+          <li>
+            <img src="../assets/images/家居页0-4.png" alt="">
+            <p>-欧式全实木花几-&nbsp;&nbsp;&nbsp;<font style="font-family:'等线'">RMB 600</font></p>
+            <span style="color:red;"><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="../assets/images/家居页0-5.png" alt="">
+            <p>-现代简约早餐桌-&nbsp;&nbsp;&nbsp;<font style="font-family:'等线'">RMB 600</font></p>
+            <span style="color:grey;"><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  <!-- 下拉刷新 -->
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."> -->
+        <!-- pullingIcon：设置下拉显示的图标 pullingText：设置下拉显示的文字 refreshingSpinner：设置刷新时显示的旋钮动画  refreshingText：设置刷新时显示的文字 -->
+      <!-- </ion-refresher-content>
+    </ion-refresher> -->
+  
+  <!-- css工具集--theme下
+  sass变量（全局）--variable.scss
+  slides组件、属性、方法及事件
+  @ViewChild()
+  创建组件 ionic g component componentName
+  模板引用变量 标签上写 #变量名
+  segment组件及ngSwitch
+  服务器代理 ionic.config.json  -->
+  
+  <!-- <ion-scroll scrollX="true">
+    <span>好友</span>
+    <span>群聊</span>
+    <span>通讯录</span>
+    <span>公众号</span>
+    <span>社区</span>
+    <span>好友</span>
+  </ion-scroll> -->
+ 
+
+  <!-- <button (click)="goSub()" ion-button outline block color="secondary">跳转</button> -->
+  
+  <!-- #ac:模板引用变量 -->
+  <!-- <aa #ac></aa>  -->
+
+<!-- 
+  <input type="text" #inp>
+  <button ion-button menuToggle>开关菜单</button> -->
+
+  <!-- <ion-list> -->
+    <!-- 列表的标题 -->
+    <!-- <ion-list-header>
+      List Header
+    </ion-list-header> -->
+  
+    <!-- 换行显示 默认超过的部分为省略号 -->
+    <!-- <ion-item text-wrap> 
+      Multiline text that should wrap when it is too long
+      to fit on one line in the item.
+    </ion-item> -->
+  
+    <!-- 添加右箭头 -->
+    <!-- <ion-item detail-push>
+      Item
+    </ion-item>
+  
+    <ion-item>
+      Item
+    </ion-item>
+  
+    <ion-item-divider>
+      Item Divider
+    </ion-item-divider> -->
+  
+    <!-- 去掉下划线 -->
+    <!-- <ion-item no-lines>
+      Item
+    </ion-item> -->
+    <!-- 创建缩略图 -->
+    <!-- <ion-item> 
+      <ion-thumbnail item-start><img src="../assets/images/55.png"></ion-thumbnail>
+      <h2>我是狗狗</h2>
+      <p>郭志朋是狗</p>
+    </ion-item> -->
+
+    <!-- 滑动列表 -->
+    <!-- <ion-item-sliding>
+      <ion-item>我是滑动列表</ion-item>
+      <ion-item-options>
+        <ion-icon name="md-flower"></ion-icon>
+      </ion-item-options>
+    </ion-item-sliding> -->
+
+    <!-- <button ion-item (click)="buttonClick()">
+      <ion-icon name="star"></ion-icon>
+      按钮
+    </button> -->
+    <!-- 图标按钮 -->
+    <!-- <button ion-button large icon-only>
+      <ion-icon name="md-flower"></ion-icon>  
+    </button> -->
+    <!-- <a ion-item href="https://www.ionicframework.com">
+      超链接
+    </a> -->
+    <!-- <ion-item *ngFor="let item of items;" detail-push>
+      {{item}}
+    </ion-item> -->
+
+  <!-- </ion-list> -->
+ 
+  <!--下拉加载  如果上面内容过少，没有滚动条，就不会出现下拉加载的现象 -->
+  <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content  loadingSpinner="bubbles" loadingText="Loading more data...">  -->
+      <!-- 设置旋转的动画和文字    -->
+    <!-- </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+
+</ion-content>
