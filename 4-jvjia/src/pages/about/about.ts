@@ -12,10 +12,15 @@ export class AboutPage {
   constructor(public navCtrl: NavController) {
   
   }
+  array=['客厅','卧室','餐厅','书房','门厅'];
+  flag=0;
   ionViewDidLoad(){
     //this.slides.getActiveIndex();
   }
   change(){
     console.log(this.slides.getActiveIndex());
+  }
+  fun(i){
+    this.flag=i;
   }
 }

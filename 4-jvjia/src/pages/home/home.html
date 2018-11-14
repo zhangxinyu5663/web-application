@@ -3,8 +3,8 @@
     <!-- <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button> -->
-    <ion-title>
-      <img src="../assets/images/title.png" alt="">
+    <ion-title text-center>
+      <img src="../assets/images/title.png" alt="" width="55px" height="35px">
     </ion-title>
     <!-- <ion-buttons end>
       <ion-icon name="options"></ion-icon>
@@ -37,15 +37,18 @@
   </ion-toolbar>  -->
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ul class="ul">
-    <li class="first" (click)="fun(1)" id="li1">推荐</li>
-    <li (click)="fun(2)" id="li2">家居</li>
-    <li (click)="fun(3)" id="li3">餐厨</li>
-    <li (click)="fun(4)" id="li4">床上用品</li>
+    <!-- <li (click)="isClick(0)" [class.first]="isActive==0">推荐</li>
+    <li (click)="isClick(1)" [class.first]="isActive==1">家居</li>
+    <li (click)="isClick(2)" [class.first]="isActive==2">餐厨</li>
+    <li (click)="isClick(3)" [class.first]="isActive==3">床上用品</li> -->
+    <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">
+      {{item}}
+    </li>
   </ul>
-  <div style="clear:both;" [ngSwitch]="num">
-      <div *ngSwitchCase="1">
+  <div [ngSwitch]="isActive">
+      <div *ngSwitchCase="0">
           <ion-slides class="sli" loop="true" autoplay="2000" pager="true" effect="slide" speed="1000" >  
                 <ion-slide>
                   <img src="../assets/images/banner.png" alt="">
@@ -91,7 +94,7 @@
             </li>
           </ul>
       </div>
-      <div *ngSwitchCase="2">
+      <div *ngSwitchCase="1">
         <ion-slides class="sli" loop="true" autoplay="2000" pager="true" effect="slide" speed="1000" >  
           <ion-slide>
             <img src="../assets/images/banner2.png" alt="">
@@ -130,7 +133,12 @@
             <span style="color:grey;"><ion-icon name="md-star-half"></ion-icon></span>
           </li>
         </ul>
-        
+      </div>
+      <div *ngSwitchCase="2">
+        <p>餐厨页</p>
+      </div>
+      <div *ngSwitchCase="3">
+        <p>床上用品页</p>
       </div>
     </div>
   <!-- 下拉刷新 -->

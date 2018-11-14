@@ -15,6 +15,10 @@ import { BPage } from '../pages/b/b';
 
 import { ComponentsModule } from '../components/components.module';  //引入组件根模块 就不用一个个的引入单个组件
 import{HttpClientModule} from '@angular/common/http';
+import { AddPage } from '../pages/add/add';
+import { LoginPage } from '../pages/login/login';
+import { SetPage } from '../pages/set/set';
+import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -24,17 +28,21 @@ import{HttpClientModule} from '@angular/common/http';
     HomePage,
     TabsPage,
     APage,
-    BPage
+    BPage,
+    AddPage,
+    LoginPage,
+    SetPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp,{
-      backButtonText: 'Back',
-      tabsHideOnSubPages:true //跳转之后隐藏下面的导航栏
+      backButtonText: '',
+      tabsHideOnSubPages:true, //跳转之后隐藏下面的导航栏
 
-      // iconMode: 'ios',
+       iconMode: 'ios',
       // modalEnter: 'modal-slide-in',
       // modalLeave: 'modal-slide-out',
       // tabsPlacement: 'bottom',
@@ -49,7 +57,11 @@ import{HttpClientModule} from '@angular/common/http';
     HomePage,
     TabsPage,
     APage,
-    BPage
+    BPage,
+    AddPage,
+    LoginPage,
+    SetPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

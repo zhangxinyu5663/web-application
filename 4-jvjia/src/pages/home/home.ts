@@ -22,6 +22,8 @@ export class HomePage { //类里面只能声明相关属性和方法
   icons:string="bookmark";
   items=[];
   num=1;
+  isActive=0;
+  arr=['推荐','家居','餐厨','床上用品'];
 
   ionViewDidLoad(){
     //this.ac.get();
@@ -55,15 +57,18 @@ export class HomePage { //类里面只能声明相关属性和方法
     }, 2000);
   }
 
-  fun(i){
-    this.num=i;
-    for(var j=1;j<=4;j++){
-      var li=document.getElementById('li'+j);
-      if(j!=i){
-        li.style.borderBottom="none";
-      }else{
-        li.style.borderBottom="4px solid #ffdb2c";
-      }
-    }
+  // fun(i){
+  //   this.num=i;
+  //   for(var j=1;j<=4;j++){
+  //     var li=document.getElementById('li'+j);
+  //     if(j!=i){
+  //       li.style.borderBottom="none";
+  //     }else{
+  //       li.style.borderBottom="4px solid #ffdb2c";
+  //     }
+  //   }
+  // }
+  isClick(i){
+    this.isActive=i;
   }
 }

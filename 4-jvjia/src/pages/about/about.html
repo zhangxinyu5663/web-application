@@ -1,16 +1,16 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
       About
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
   <!-- 分页类型默认为bullets -->
-  <ion-slides class="sli" loop="true" autoplay="3000" pager="true" effect="slide" speed="1500" >  
+  <!-- <ion-slides class="sli" loop="true" autoplay="3000" pager="true" effect="slide" speed="1500" >   -->
     <!-- 循环播放 3s之后自动播放，速度为 -->
-      <ion-slide>
+      <!-- <ion-slide>
         <img src="../assets/images/33.png" alt="">
       </ion-slide>
       <ion-slide>
@@ -19,5 +19,22 @@
       <ion-slide>
         <img src="../assets/images/55.png" alt="">
       </ion-slide>
-    </ion-slides>
+    </ion-slides> -->
+  <div class="box">
+    <input type="text" name="search" placeholder="双十二特惠好物超低价"><ion-icon name="ios-search"></ion-icon>
+  </div>
+  <img src="../assets/images/banner4.png" alt="">
+  <ul class="ul1">
+    <li *ngFor="let item of array;let i=index;" [class.back]="flag==i" (click)="fun(i)">
+      {{item}}
+    </li>
+  </ul>
+  <ul class="ul2">
+    <p>————沙发————<i class="iconfont icon-funnel"></i></p>
+    <li><img src="../assets/images/商城页0-1.png" alt=""> </li>
+    <li><img src="../assets/images/商城页0-2.png" alt=""> </li>
+    <li><img src="../assets/images/商城页0-3.png" alt=""> </li>
+    <li><img src="../assets/images/商城页0-4.png" alt=""> </li>
+    <li style="width: 96%;text-align:right;"><a href="" style="color:gray;text-decoration: none;">查看全部商品>></a></li>
+  </ul>
 </ion-content>

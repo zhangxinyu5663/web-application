@@ -2,4 +2,56 @@ page-about {
     .sli{
         height:200px;
     }
+    .box{
+        padding: 0;
+        text-align: center;
+        line-height: 45px;
+        width: 100%;
+        height: 45px;
+        background-color: #fafafa;
+        input{
+            width: 344px;
+            height:28px;
+            background-color: #ededed;
+            border:1px solid #ededed;
+            border-radius: 5px;
+        }
+    }
+    img{
+        display: block;
+    }
+    .ul1{
+        padding: 0;
+        margin: 0;
+        li{
+            float: left;
+            // display: inline-block;
+            width:20%;
+            height:40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .back{
+            background-color: #ffdb2c;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    .ul2{
+        padding:0;
+        p{
+            width: 100%;
+            text-align: center;
+            i{
+                float: right;
+                margin-right:10px; 
+            }
+        }
+        li{
+            display: inline-block;
+            width:47%;
+            margin: 0 4px 5px 4px;
+        }
+    }
 }

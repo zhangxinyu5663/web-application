@@ -15,7 +15,22 @@ page-a {
             text-align: center;
         }
     }
+    .ding{
+        padding:0;
+        height:30px;
+        line-height: 30px;
+        background:#eeeeee;
+        li{
+            padding:5px;
+            width: 47%;
+            float: left;
+            a{
+                color:gray;
+            }
+        }
+    }
     .ul1{
+        margin: 0;
         padding: 0;
         li{
             position: relative;
@@ -23,8 +38,11 @@ page-a {
             background-color: white;
             width: 32%;
             height:85px;
-            margin-left:2px;
+            margin-left:1px;
             text-align: center;
+        }
+        .bk{
+            background-color: #ffdb2c;
         }
         i{
             line-height: 75px;
@@ -36,20 +54,21 @@ page-a {
             position: absolute;
             top:50px;
         }
-        #lis1{
-            background-color: #ffdb2c;
-        }
     }
     .ul2{
+        margin-top:2px;
         padding: 0;
         li{
             position: relative;
             display: inline-block;
             background-color: white;
-            width: 45%;
+            width: 48%;
             height:85px;
-            margin:5px 1px 5px 3%;
+            margin:3px 2px 3px 2px;
             text-align: center;
+        }
+        .bk{
+            background-color: #ffdb2c;
         }
         i{
             line-height: 75px;
