@@ -1,0 +1,28 @@
+
+<ion-content padding style=" background-color: #ffdb2c;">
+  <ul>
+    <li>
+      <span [class.bk]="flag==1" (click)="fun(1)"><i class="iconfont icon-taideng"></i></span>
+      <h5>我搭</h5>
+      <p>家居搭配DIY</p>
+    </li>
+    <li>
+      <span [class.bk]="flag==2" (click)="fun(2)"><i class="iconfont icon-shejian"></i></span>
+      <h5>专题</h5>
+      <p>分享更多乐趣</p>
+    </li>
+    <li>
+      <span [class.bk]="flag==3" (click)="fun(3)"><i class="iconfont icon-shejishi"></i></span>
+      <h5>设计师</h5>
+      <p>乌托家的创造者</p>
+    </li>
+    <li>
+      <span [class.bk]="flag==4" (click)="fun(4)"><i class="iconfont icon-zixun"></i></span>
+      <h5>资讯</h5>
+      <p>专业导购指南</p>
+    </li>
+  </ul>
+</ion-content>
+<ion-footer no-border text-center>
+  <ion-icon (click)="close()" style="font-size:30px;padding-bottom:20px;" color="light" name="md-close"></ion-icon>
+</ion-footer>
