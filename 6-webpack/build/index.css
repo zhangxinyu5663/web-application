@@ -1,0 +1,153 @@
+
+.header {
+  height: 115px;
+  padding: 0 40px;
+}
+.header img {
+  margin-top: 26px;
+  float: left;
+}
+.header button {
+  width: 165px;
+  height: 55px;
+  background-color: #e8420a;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 28px;
+  float: left;
+  margin: 36px 0 0 180px;
+}
+.header i {
+  float: right;
+  font-size: 55px;
+  margin-top: 35px;
+}
+
+.banner {
+  height: 365px;
+  background: url(782b299285098b7995387a5145d815ae.png);
+  padding: 0 40px;
+}
+.banner .tit {
+  font-size: 40px;
+  color: white;
+  margin: 20px 0;
+}
+.banner .search {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 68px;
+  border-radius: 10px;
+  display: flex;
+}
+.banner .search label {
+  width: 162px;
+  height: 68px;
+  background-color: #f2f3f7;
+  display: block;
+  border-radius: 10px 0 0 10px;
+  line-height: 68px;
+  text-align: center;
+}
+.banner .search label span {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.banner .search label i {
+  font-size: 30px;
+}
+.banner .search div {
+  background-color: #fff;
+  width: 348px;
+  height: 68px;
+}
+.banner .search div input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 20px;
+  text-indent: 30px;
+  /*首行缩进*/
+}
+.banner .search button {
+  width: 160px;
+  height: 68px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background-color: #e8420a;
+}
+.banner .search button i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.loading {
+  text-align: center;
+  animation: load 2s linear infinite;
+}
+@keyframes load {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading i {
+  font-size: 100px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+input,
+button {
+  outline: none;
+}
+
+@font-face {font-family: "iconfont";
+  src: url(58313bdced8f9031ad9b2f76aac054a5.eot); /* IE9 */
+  src: url(58313bdced8f9031ad9b2f76aac054a5.eot#iefix) format('embedded-opentype'), 
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAUcAAsAAAAACfwAAATOAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDKgqHIIYFATYCJAMUCwwABCAFhG0HSxuMCBHVow2RfXVgGyse/SVFyDTwRqz4POm4KhtuA38kvc/B83C599fdbiwrGhOnFWAUUIEHmIWYaEAnej+8p72sI7J2UAaI6aAM0EkODuIXef7f2/37b9MBZZZRJ7FABuI1QECc4MU5D2xUhBrJ2ZNH33YpjdOMHgD/c8x0TQ2Wf5UgU4wsy3weadMJDqjiqi0SD/gOZKJ+w9jFZdwOAYUZQ8jtHRgJgpy2SYC8eTlpIBjz8BKKyOxJzqkBOcAnGz08VwH4un8vP5gnCKho0Hbes70ywfU1vK1h4f9xiTYCtP2FAOYsMLAHOOTJjTyB5Zv2rqXIq+R1AWT6PEWDvEbf1vz/j3GgW0soU6B/eCCUccgCzVIh7C3vaMAEBI0AigYNYc5LC3U3xRLolAIMgVwA8oGGn5NWuWBblCwsJFyBmKurigrFdtdlM/ej6aeRZGsU9Swmq56BCOqIJBlJ0zXnafVVxucchS2RqdLs2P23VRbv2Oy7pTx3Mw6EuXcIf1nU/uPcE8Qx/GhML5khP3U0oXczdwuxCf6QjfH4JmLL4mb22kZI66WjaRqZORNyhPGZnJ5CSVJpmvKjKIKJucIoLtDRExOzk7LnKLtrp+RwMpIko3vZNG2+m7ZnMhEnGBFiHB8TPktql8IA32W2i4oan0InZjgMw0ZWabDbu3eCOylCUE63qMgx0nQnCQfjJ37k6L038VvEHe7tBskxFMZlpSY5yERiqBj/3U6h8jJoZJ06uyS1MpEjmZOXUSyfXpybx5GsTJCWMhsxhJgkYtl9nVpDg9qaxzKRFAO1PItLoLBUX182xzSlurM4qK9/YJ6ku4eUFOSQlPTwQJCnbhTfuVlEdPPOk5tFRTb7iYRiwVgQxm+NfXNw1eOqO9j7u13J0sbS1lLYwTJOg33EUP8ePtaxPcFSWVgUYvUVBin4n/faq+yjGKgcGmIsYIxFZ2s+2PW9ZlcZpytEWdzdgfFQ2Kp42lA6RiZyRXHlntBKDrcfuzf0IUcz2s1EwDg0JLDl9+5VzrwqEhuUnrpcNYm68Ur7aBJe0Rm6NkJXpa8KhSYbu0XJ5N5BEOfJjKQ5/5T6DUMnD9QPHE57q4m8kMkteIZk41Sho9JHhWzTdbOtNAlpH17UrasjZTkoPVe8sdTPT0DAtJW6OZu7ruCvL4HLn0qm8rvyp9pj/MURRdv58AYA2g1NswLx3br6Mav6/792PDwsHADs8Dz9Glfxtse5KRKOv07lm0j+Xw57IFV9bJfmk9JK2m/PxQsliH8GWa95I6LOVJXr2jQQPiD0rGx8ao4WJQYe92Mb124EkRmHoFJTMJk50rF7CKUDJDJXKOz4nF0aKgcWiRDAVgcA0bMDVMcPTM81pGMfQZj4BIleLCg8EJlLlpbpeZcroWAsQC7gVNtow88Xr/mFZqgERfUu9YcUXBLSKEkWn9gg9bEnjCZj1qCpreEB7oZV1UJHrUfFkWXu8jjWeW8UqbZeXVZXQsFYgFzAqbbR9mS+pH7/hWaoBJW0lOR/SMFND2mU1EA+LU2tlnOZH0aTMWu8TlNbwwOGsNJzLXT5yzwqjmyLTJfHaJSua4nGt9XXWPvzt9WeHOtRXalZyyGgIGUP3om/cKeuDY7PpHpXYzOsVgAA') format('woff2'),
+  url(8b89b53259db54ef1ecb7bd9fc9b79a2.woff) format('woff'),
+  url(00a54a6a7aba31723eefd43ef7273f66.ttf) format('truetype'), 
+  url(a62d04c56f51cdb50c2ab1ce3d4b8ab3.svg#iconfont) format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e600";
+}
+
+.icon-jiazai:before {
+  content: "\e601";
+}
+
+.icon-position:before {
+  content: "\e614";
+}
+
+.icon-menu:before {
+  content: "\e877";
+}
+
+
+
+/*# sourceMappingURL=index.css.map*/
